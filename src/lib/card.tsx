@@ -1,6 +1,6 @@
 interface CardProps {
   title: string
-  href: string
+  href?: string
   body: string
   date: string
 }
