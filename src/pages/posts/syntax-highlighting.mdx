@@ -1,0 +1,28 @@
+---
+title: Syntax highlighting
+layout: ../../layouts/post.astro
+date: 2022-08-28
+---
+
+The MDX integration respects
+[your project's `markdown.syntaxHighlight` configuration](/en/guides/markdown-content/).
+
+It will highlight your code blocks with
+[Shiki](https://github.com/shikijs/shiki) by default. You can customize this
+highlighter using the `markdown.shikiConfig` option in your `astro.config`. For
+example, you can apply a different built-in theme like so:
+
+```js
+// astro.config.mjs
+export default {
+  markdown: {
+    shikiConfig: {
+      theme: 'dracula',
+    },
+  },
+  integrations: [mdx()],
+}
+```
+
+Visit [our Shiki configuration docs](/en/guides/markdown-content/) for more on
+using Shiki with Astro.
